@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta content="Random User" property="og:title" />
+    <meta
+      content="A utility to generate a dummy person's info!"
+      property="og:description"
+    />
+    <meta content="https://aktindo.me/random-user" property="og:url" />
+    <meta content="#65C3C8" data-react-helmet="true" name="theme-color" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+
+    <title>Random Person</title>
+  </head>
+  <body class="bg-base-100 text-base-content">
+    <section
+      class="
+        main
+        absolute
+        left-1/2
+        top-1/2
+        transform
+        -translate-x-1/2 -translate-y-1/2
+        text-center
+      "
+    >
+      <div class="heading my-5">
+        <h1 class="text-4xl">Random User Generator</h1>
+        <p class="text-lg mt-2">A utility to generate a dummy person's info!</p>
+      </div>
+      <div class="content flex justify-center">
+        <div class="card text-center bg-base-200">
+          <div id="spinner" class="spinner">
+            <div class="bounce1 bg-accent"></div>
+            <div class="bounce2 bg-accent"></div>
+            <div class="bounce3 bg-accent"></div>
+          </div>
+          <figure class="px-10 pt-10">
+            <div class="avatar justify-center">
+              <div
+                id="avatarImgContainer"
+                class="avatar-img-container rounded-full w-24 h-24"
+              ></div>
+            </div>
+          </figure>
+          <div class="card-body hidden">
+            <h2 id="username" class="username card-title"></h2>
+            <div class="details grid grid-cols-1 md:grid-cols-3 justify-center">
+              <div class="location-container my-3 md:my-2">
+                <p class="location-heading flex items-center font-bold">
+                  <span class="material-icons-outlined text-red-500 mr-1">
+                    near_me
+                  </span>
+                  Location
+                </p>
+                <p id="location" class="text-left mx-2"></p>
+              </div>
+              <div class="gender-container my-3 md:my-2">
+                <p class="gender-heading flex items-center font-bold">
+                  <span class="material-icons-outlined text-blue-500 mr-1">
+                    male
+                  </span>
+                  Gender
+                </p>
+                <p id="gender" class="text-left mx-2"></p>
+              </div>
+              <div class="birthday-container my-3 md:my-2">
+                <p class="birthday-heading flex items-center font-bold">
+                  <span class="material-icons-outlined text-yellow-400 mr-1">
+                    cake
+                  </span>
+                  Birthday
+                </p>
+                <p id="birthday" class="text-left mx-2"></p>
+              </div>
+            </div>
+            <div class="email-container my-3 md:my-2">
+              <p class="email-heading flex items-center font-bold">
+                <span class="material-icons-outlined text-blue-300 mr-1">
+                  email
+                </span>
+                Email
+              </p>
+              <p id="email" class="text-left mx-2"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buttons mt-5">
+        <button id="generateUserBtn" class="btn btn-primary">
+          Generate User
+        </button>
+      </div>
+    </section>
+
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
